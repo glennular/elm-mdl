@@ -48,7 +48,7 @@ echo "check_pr_branch $current_branch $major_version_branch $travis_pull_request
 if [ $travis_pull_request != "false" ]; then
   # Is a pull request - need to check elm-package diff
   echo "Running elm package diff"
-  string=$(elm package diff)
+  string=$(libsysconfcpus/bin/sysconfcpus -n 2 elm package diff)
   echo $string
   if [[ $? != 0 ]]; then
       echo "Command failed."
